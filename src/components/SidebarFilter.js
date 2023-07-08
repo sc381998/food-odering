@@ -6,7 +6,7 @@ import { products } from '@/data';
 
 function SidebarFilter({ title, filterShowBy }) {
     const context = useContext(AppContext);
-    const {productsChecked, setProductsChecked, setProductDetails, productDetails } = context || {};
+    const {productsChecked, setProductsChecked, setProductDetails } = context || {};
 
     const handleCheckbox = (param) => {
         const allProductsChecked = {...productsChecked, [param]: !productsChecked[param]}

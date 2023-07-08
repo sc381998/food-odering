@@ -252,12 +252,139 @@ input:focus-visible {
   font-weight: 500;
 }
 
+input[type="text"],
+input[type="password"] {
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #01d28e;
+  border: 1px solid #01d28e;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+input[type="submit"]:hover {
+  background: #6cf0c2;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.list-container {
+  display: flex;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.cart-items-container {
+  display: none;
+  position: absolute;
+  right: 7%;
+  height: 300px;
+  width: 18rem;
+  background: white;
+  padding: 0 1.5rem;
+  border: 0.2rem solid #ffc107;
+  z-index: 999999;
+}
+
+.cart-items-container.active {
+  display: block;
+}
+
+.cart-items-container .cart-item {
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cart-items-container .cart-item .fa-times {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #13131a;
+}
+
+.cart-items-container .cart-item .fa-times:hover {
+  color: #ffc107;
+}
+.cart-items-container .cart-item .content h3 {
+  font-size: 2rem;
+  color: #13131a;
+  padding-bottom: 0.5rem;
+}
+.cart-items-container .cart-item .content .price {
+  font-size: 1rem;
+  color: #ffc107;
+}
+
+.cart-items-container .btn {
+  width: 100%;
+  text-align: center;
+}
+
+.add-to-cart {
+  padding: 0px 10px;
+  color: darkslategrey;
+}
+.empty-cart{
+  position: absolute;
+    left: 28%;
+    top: 39%;
+}
+.checkout-btn{
+  position: absolute;
+    bottom: 0px;
+    background: #ffc107;
+    right: 0px;
+    padding: 8px;
+}
+.title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+}
+
+.no-data {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: red;
+}
+
 .d-flex-align {
   display: flex;
   margin-top: 8px;
   margin-bottom: 8px;
   justify-content: space-around;
 }
+
 .d-flex-align span {
   margin-left: 4px;
 }

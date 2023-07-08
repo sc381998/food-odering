@@ -24,16 +24,18 @@ export const metadata = {
 const totalLeftFilter = [...season, ...dietaryPreference, ...meal, ...sweetThings];
 const initalFilterChecked = {};
 totalLeftFilter.forEach(ele => {
-  if(ele === "Autumn" || ele === "Egg Free"){
+  if (ele === "Autumn" || ele === "Egg Free") {
     initalFilterChecked[ele] = true
-  }else{
+  } else {
     initalFilterChecked[ele] = false
   }
 })
-    
+
 export default function RootLayout({ children }) {
   const [productDetails, setProductDetails] = useState(products);
   const [productsChecked, setProductsChecked] = useState(initalFilterChecked);
+  const [isLoginClicked, setIsLoginClicked] = useState(false);
+  const [selectedCart, setSelectedCart] = useState([]);
   return (
     <html lang="en">
       <Head>
@@ -44,17 +46,22 @@ export default function RootLayout({ children }) {
         />
       </Head>
       <body className={inter.className}>
-        <TopHeader />
-        <AppContext.Provider value={{productDetails, setProductDetails, productsChecked, setProductsChecked}}>
-        <div className={styles.container}>
-          <Header />
-          <div className='d-flex'>
-            <Sidebar />
-            <div className={styles.content}>
-              {children}
+
+        <AppContext.Provider value={{
+          productDetails, setProductDetails,
+          productsChecked, setProductsChecked,
+          setIsLoginClicked, selectedCart, setSelectedCart
+        }}>
+          <TopHeader />
+          <div className={styles.container}>
+            <Header />
+            <div className='d-flex'>
+              {!isLoginClicked && <Sidebar />}
+              <div className={styles.content}>
+                {children}
+              </div>
             </div>
           </div>
-        </div>
         </AppContext.Provider>
         <Footer />
       </body>

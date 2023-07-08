@@ -9,11 +9,18 @@ import { useContext } from 'react'
 
 export default function Home() {
   const context = useContext(AppContext);
-  const { productDetails } = context || {};
+  const { productDetails, selectedCart, setSelectedCart } = context || {};
+  const onAddToCart = (id) => {
+    setSelectedCart([...selectedCart, id])
+  }
+  const onRemoveFromCart = (id) => {
+    const filtertedData = selectedCart.filter(ele => ele !== id);
+    setSelectedCart(filtertedData);
+  }
   return (
     <main className={styles.main}>
       <div className='box-container'>
-        {
+        {productDetails.length ?
           productDetails.map(item => (
             <div className='box' key={item.id}>
               <Image src={item.img} alt="" />
@@ -28,10 +35,16 @@ export default function Home() {
                 <span><FontAwesomeIcon icon={faThumbsUp} className='fa-light' style={{ height: "14px" }} />
                   <span>SUPER EASY</span></span>
               </div>
+              {selectedCart.includes(item.id) ? 
+                <a href="#" className='btn add-to-cart' onClick={() => onRemoveFromCart(item.id)}>Remove from Cart</a> :
+                <a href="#" className='btn add-to-cart' onClick={() => onAddToCart(item.id)}>Add to Cart</a>
+              }
+              
               {/* <div className='price'>{item.price}</div> */}
               <p>Baked sweet potatoes with creamy avocado & pumpkin</p>
             </div>
-          ))
+          )) : 
+          <div className='no-data'>No data</div>
         }
       </div>
     </main>

@@ -1,10 +1,13 @@
-import React from 'react'
+"use client"
+import React, { useContext } from 'react'
 import styles from '../app/utils.module.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faUserSecret } from "@fortawesome/free-solid-svg-icons";
+import AppContext from '@/AppContext';
 
 function TopHeader() {
+    const { setIsLoginClicked } = useContext(AppContext);
     return (
         <div className={styles.topHeaderContainer}>
             <div>
@@ -18,7 +21,7 @@ function TopHeader() {
                 <FontAwesomeIcon icon={faUserSecret} style={{ height: "14px", marginRight: "4px" }} />
                 <button>Register</button>
                 <FontAwesomeIcon icon={faUser} style={{ height: "14px", marginRight: "4px" }} />
-                <button>Login</button>
+                <button onClick={() => setIsLoginClicked(true)}><Link href="/login">Login</Link></button>
             </div>
         </div>
     )

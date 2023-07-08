@@ -101,4 +101,15 @@ const meal = ["Breakfast", "Dessert", "Dinner", "Holidays", "Snacks and Appetize
 
 const sweetThings = ["Fruit Desserts", "Chocolate", "Cakes and Quick Breads", "Cookies and Bars", "Pies and Tarts", "Ice Cream and Popsicles"]
 
-export { products , season, dietaryPreference, meal, sweetThings };
+const users = [
+  {
+    username: "user1",
+    password: "pass1"
+  },
+  {
+    username: "user2",
+    password: "pass2"
+  }
+];
+
+export { products , season, dietaryPreference, meal, sweetThings, users };
