@@ -4,13 +4,18 @@
 }
 .sidebar {
     margin: 0;
-    padding: 0;
+    padding: 16px;
     width: 250px;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
     height: 100%;
     overflow: auto;
 }
+.sidebar p {
+    font-size: 10px;    
+    margin-top: 8px;
+    margin-bottom: 8px;
 
+}
 .sidebar a {
     display: block;
     color: black;
@@ -48,8 +53,18 @@
     color: white;
     margin-right: 16px;
 }
-
-
+.checkboxContainer{
+    display: flex;
+    margin-top: 8px;
+}
+.checkboxContainer span{
+    margin-left: 6px;
+    font-size: 12px;
+}
+.sidebar h4{
+    margin-top: 28px;
+    font-weight: 600;
+}
 @media screen and (max-width: 500px) {
     .sidebar {
         width: 100%;

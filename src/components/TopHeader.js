@@ -9,15 +9,15 @@ function TopHeader() {
         <div className={styles.topHeaderContainer}>
             <div>
                 <Link href="/">Home</Link>
-                <Link href="/news">Categories</Link>
-                <Link href="/contact">Books</Link>
-                <Link href="/contact">Recipe</Link>
-                <Link href="/contact">Popular</Link>
+                <Link href="/categories">Categories</Link>
+                <Link href="/books">Books</Link>
+                <Link href="/recipe">Recipe</Link>
+                <Link href="/popular">Popular</Link>
             </div>
             <div className='center'>
-                <FontAwesomeIcon icon={faUserSecret} style={{ height: "14px", marginRight: "4px" }}/>
+                <FontAwesomeIcon icon={faUserSecret} style={{ height: "14px", marginRight: "4px" }} />
                 <button>Register</button>
-                <FontAwesomeIcon icon={faUser} style={{ height: "14px", marginRight: "4px" }}/>
+                <FontAwesomeIcon icon={faUser} style={{ height: "14px", marginRight: "4px" }} />
                 <button>Login</button>
             </div>
         </div>

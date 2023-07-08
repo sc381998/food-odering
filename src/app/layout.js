@@ -1,3 +1,4 @@
+"use client"
 import './globals.css'
 import { Inter } from 'next/font/google'
 import styles from '../app/utils.module.css'
@@ -8,6 +9,8 @@ import Head from 'next/head'
 import Footer from '@/components/Footer'
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { useState } from 'react'
+import AppContext from '@/AppContext'
 config.autoAddCss = false;
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,6 +21,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const [productDetails, setProductDetails] = useState(["sfsfks"]);
   return (
     <html lang="en">
       <Head>
@@ -29,6 +33,7 @@ export default function RootLayout({ children }) {
       </Head>
       <body className={inter.className}>
         <TopHeader />
+        <AppContext.Provider value={{productDetails, setProductDetails}}>
         <div className={styles.container}>
           <Header />
           <div className='d-flex'>
@@ -37,8 +42,8 @@ export default function RootLayout({ children }) {
               {children}
             </div>
           </div>
-
         </div>
+        </AppContext.Provider>
         <Footer />
       </body>
     </html>

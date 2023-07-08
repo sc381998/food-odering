@@ -1,82 +1,95 @@
-import menuImage1 from "./assets/images/p1.jpg";
+import menuImage1 from "./assets/images/p10.jpg";
 import menuImage2 from "./assets/images/p2.jpg";
 import menuImage3 from "./assets/images/p3.jpg";
 import menuImage4 from "./assets/images/p4.jpg";
 import menuImage5 from "./assets/images/p5.jpg";
 import menuImage6 from "./assets/images/p6.jpg";
-import menuImage7 from "./assets/images/cart-item-1.png";
-import menuImage8 from "./assets/images/cart-item-2.png";
-import menuImage9 from "./assets/images/cart-item-3.png";
-import menuImage10 from "./assets/images/cart-item-4.png";
+import menuImage7 from "./assets/images/p7.jpg";
+import menuImage8 from "./assets/images/p8.jpg";
+import menuImage9 from "./assets/images/p9.jpg";
 
 const products = [
   {
     id: "menu_1",
-    name: "Burger",
     price: "20.89",
+    cookingTime: "10",
+    isPopular: true,
+    category: ["Autumn", "Dairy Free", "Dessert", "Ice Cream and Popsicles"],
     img: menuImage1,
   },
   {
     id: "menu_2",
-    name: "Finger fries",
     price: "10.50",
+    cookingTime: "45",
+    isPopular: false,
+    category: ["Autumn", "Egg Free", "Dinner", "Fruit Desserts"],
     img: menuImage2,
   },
   {
     id: "menu_3",
-    name: "breads",
     price: "40.00",
+    cookingTime: "45",
+    isPopular: true,
+    category: ["Spring", "Gluten Free", "Dessert", "Pies and Tarts"],
     img: menuImage3,
   },
   {
     id: "menu_4",
-    name: "Pizza",
     price: "35.67",
+    cookingTime: "15",
+    category: ["Autumn", "Dairy Free", "Snacks and Appetizers", "Fruit Desserts"],
+    isPopular: false,
+
     img: menuImage4,
   },
   {
     id: "menu_5",
-    name: "cheesecakes",
     price: "24.45",
+    cookingTime: "30",
+    isPopular: false,
+    category: ["Summer", "Gluten Free", "Dessert", "Pies and Tarts"],
     img: menuImage5,
   },
   {
     id: "menu_6",
-    name: "muffins",
     price: "15.13",
+    cookingTime: "50",
+    isPopular: false,
+    category: ["Winter", "Egg Free", "Dessert", "Pies and Tarts"],
     img: menuImage6,
   },
   {
     id: "menu_7",
-    name: "breads",
     price: "40.00",
-    img: menuImage3,
+    cookingTime: "30",
+    isPopular: true,
+    category: ["Spring", "Healthy", "Holidays", "Fruit Desserts"],
+    img: menuImage7,
   },
   {
     id: "menu_8",
-    name: "Pizza",
     price: "35.67",
-    img: menuImage4,
+    cookingTime: "20",
+    isPopular: false,
+    category: ["Summer", "Gluten Free", "Dessert", "Cookies and Bars"],
+    img: menuImage8,
   },
   {
     id: "menu_9",
-    name: "cheesecakes",
     price: "24.45",
-    img: menuImage5,
-  },
-  {
-    id: "menu_10",
-    name: "muffins",
-    price: "15.13",
-    img: menuImage6,
-  },
-  {
-    id: "menu_11",
-    name: "muffins",
-    price: "15.13",
-    img: menuImage2,
+    cookingTime: "30",
+    isPopular: false,
+    category: ["Autumn", "Egg Free", "Breakfast", "Cakes and Quick Breads"],
+    img: menuImage9,
   }
 ];
 
+const season = ["Autumn", "Spring", "Summer", "Winter"];
 
-export default products;
+const dietaryPreference = ["Dairy Free", "Egg Free", "Gluten Free", "Healthy", "Quick and Easy"];
+
+const meal = ["Breakfast", "Dessert", "Dinner", "Holidays", "Snacks and Appetizers"]
+
+const sweetThings = ["Fruit Desserts", "Chocolate", "Cakes and Quick Breads", "Cookies and Bars", "Pies and Tarts", "Ice Cream and Popsicles"]
+
+export { products , season, dietaryPreference, meal, sweetThings };

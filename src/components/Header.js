@@ -19,7 +19,7 @@ function Header() {
             <option>Food</option>
             <option>Books</option>
           </select>
-          <input />
+          <input placeholder='Search recipes...'/>
           <span>
             <FontAwesomeIcon icon={faMagnifyingGlass} className='fa-rotate-90' style={{ height: "14px" }} />
           </span>
@@ -34,10 +34,10 @@ function Header() {
       <div className='lower-header'>
         <div>
           <Link href="/">Home</Link>
-          <Link href="/news">Categories</Link>
-          <Link href="/contact">Books</Link>
-          <Link href="/contact">Recipe</Link>
-          <Link href="/contact">Popular</Link>
+          <Link href="/categories">Categories</Link>
+          <Link href="/books">Books</Link>
+          <Link href="/recipe">Recipe</Link>
+          <Link href="/popular">Popular</Link>
         </div>
         <div className='social-icons'>
           <FontAwesomeIcon icon={faFacebook} style={{ height: "14px" }} />

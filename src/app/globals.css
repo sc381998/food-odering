@@ -8,7 +8,6 @@
   --foreground-rgb: 0, 0, 0;
   /* --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255; */
-
   --primary-glow: conic-gradient(from 180deg at 50% 50%,
       #16abff33 0deg,
       #0885ff33 55deg,
@@ -155,8 +154,25 @@ a {
 .box-container .box {
   padding: 1rem;
   text-align: center;
-  /* border: 0.2rem solid #ffc107; */
   width: 250px;
+  position: relative;
+}
+
+.box svg {
+  color: gray;
+}
+
+.popular-container {
+  position: absolute;
+  left: 25px;
+  background: #ffc10785;
+  padding: 6px;
+}
+
+.popular-container svg {
+  color: black;
+  opacity: 0.7;
+  margin-right: 4px;
 }
 
 .box-container .box img {
@@ -166,13 +182,21 @@ a {
 
 .box-container .box h3 {
   color: black;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 1rem 0;
+}
+
+.search-container input {
+  padding: 8px;
+}
+
+input:focus-visible {
+  outline: none;
 }
 
 .box-container .box .price {
   color: black;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   padding: 0.5rem 0;
 }
 
@@ -203,6 +227,36 @@ a {
   justify-content: space-between;
   align-items: center;
   /* border: 1px solid black; */
+}
+
+.sidebar-search span {
+  background: black;
+  color: white;
+  padding: 6px;
+  position: relative;
+  top: 1px;
+}
+
+.sidebar-search input {
+  height: 32px;
+  margin-top: 12px;
+  padding-left: 8px;
+  width: 150px;
+}
+
+.box span {
+  font-size: 12px;
+}
+
+.box p {
+  font-weight: 500;
+}
+
+.d-flex-align {
+  display: flex;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  justify-content: space-around;
 }
 
 .lower-header {
@@ -239,6 +293,8 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 2px;
+  position: relative;
+  left: 36px;
 }
 
 .search-container input {
@@ -258,7 +314,7 @@ a {
 
 .search-container select {
   border: none;
-  background: #d3d3d36b;
+  background: #ebe1e16b;
   height: 32px;
   text-transform: uppercase;
   font-size: 10px;
