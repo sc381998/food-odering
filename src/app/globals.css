@@ -258,6 +258,9 @@ input:focus-visible {
   margin-bottom: 8px;
   justify-content: space-around;
 }
+.d-flex-align span {
+  margin-left: 4px;
+}
 
 .lower-header {
   display: flex;

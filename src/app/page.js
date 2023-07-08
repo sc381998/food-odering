@@ -9,12 +9,12 @@ import { useContext } from 'react'
 
 export default function Home() {
   const context = useContext(AppContext);
-  console.log("context",context)
+  const { productDetails } = context || {};
   return (
     <main className={styles.main}>
       <div className='box-container'>
         {
-          products.map(item => (
+          productDetails.map(item => (
             <div className='box' key={item.id}>
               <Image src={item.img} alt="" />
               {item.isPopular && <span className='popular-container'>
