@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-      <title>First Post</title>
+        <title>First Post</title>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -30,10 +30,14 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <TopHeader />
         <div className={styles.container}>
-          <Sidebar />
-          <div className={styles.content}>
-            {children}
+          <Header />
+          <div className='d-flex'>
+            <Sidebar />
+            <div className={styles.content}>
+              {children}
+            </div>
           </div>
+
         </div>
         <Footer />
       </body>
